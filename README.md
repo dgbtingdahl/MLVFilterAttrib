@@ -68,7 +68,7 @@ These instructions are for Linux/Unix. The plugin should compile and run on Wind
 4. Select the *Utilities-Tools-Create Plugin Devel. Env.* menu item to create a development work folder (eg /home/*user*/ODWork)
 5. Unzip the attribute source zip archive downloaded in step 1 in the development work folder. This will overwrite the CMakeLists.txt in the development work folder and add 2 plugin source folders to the plugin folder.
 6. Optionally edit CMakeCache.txt in the development work folder and change Debug to Release
-7. Open a terminal, cd to the development work folder and type *make*
+7. Open a terminal, cd to the development work folder and type *cmake .* and then *make*
 8. This should create the 2 plugin binary files,libMLVFilterAttrib.so and libuiMLVFilterAttrib.so, in the *bin* folder (eg in *ODWork/bin/lux64/Release/*) and 4 .alo files for the plugin in the root of the development work folder. 
 
 For installation there are 2 alternatives.
