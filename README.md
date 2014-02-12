@@ -1,18 +1,18 @@
-<a name="top"></a>
 #MLV Filter
 ##Name
 Mean of Least Variance Filter plugin for [OpendTect](http://www.opendtect.org/) - a smoothing filter for seismic data that is kind to structure.
 
 ##Contents
 -  [Description](#description)
--  [Input Parameters](#input parameters)
+-  [Input Parameters](#input-parameters)
 -  [Examples](#examples)
 -  [Building and Installation](#building-and-installation)
 -  [References](#references)
 
-<a name="description"></a>
-## Description [![back to top](docs/uparrow.jpg)](#top)
-This attribute is an implementation of a mean of least variance filter ([Schulze & Pearce,1993][1]) where the analysis elements are all the possible planes through the sample points in the analysis block. This algorithm may be similar to that proposed by [Al-Dossary & Wang (2011)][2]. 
+## Description
+[![back to top](docs/uparrow.jpg)](#mlv-filter)
+
+This attribute is an implementation of a mean of least variance filter ([Schulze & Pearce,1993](#schulze-and-pearce-1993)) where the analysis elements are all the possible planes through the sample points in the analysis block. This algorithm may be similar to that proposed by [Al-Dossary & Wang (2011)](#al-dossary-and-wang-2011). 
 
 The sample variance for all samples on each analysis element is calculated and the output statistic (average, mean or element index) is output for the element with the least variance. 
 
@@ -20,8 +20,9 @@ The following figure shows the relationship between the geometry of the analysis
 
 ![Element Index](docs/MLVFilterAttrib_elements.jpg "MLV Filter analysis elements")
 
-<a name="input parameters"></a>
-## Input Parameters [![back to top](docs/uparrow.jpg)](#top)
+##Input Parameters
+[![back to top](docs/uparrow.jpg)](#mlv-filter)
+
 This attribute only has 2 parameters:
 
 *   Filter size
@@ -34,8 +35,8 @@ This attribute only has 2 parameters:
 
 ![Input Parameters](docs/MLVFilterAttrib_par1.jpg "MLF Filter input parameters")
 
-<a name="examples"></a>
-## Examples [![back to top](docs/uparrow.jpg)](#top)
+##Examples
+[![back to top](docs/uparrow.jpg)](#mlv-filter)
 
 ###Input Data
 ![Input](docs/MLVFilterAttrib_input.jpg "Input data")
@@ -55,8 +56,9 @@ This attribute only has 2 parameters:
 ###MLV Size 3 Elements over Input
 ![MLV 3 Elements](docs/MLVFilterAttrib_MLV3_Elements.jpg "MLV 3 elements")
 
-<a name="building-and-installation"></a>
-##Building and Installation [![back to top](docs/uparrow.jpg)](#top)
+##Building and Installation
+[![back to top](docs/uparrow.jpg)](#mlv-filter)
+
 These instructions are for Linux/Unix. The plugin should compile and run on Windows but I have not tried or tested it on that platform.
 
 ###Building
@@ -71,20 +73,20 @@ These instructions are for Linux/Unix. The plugin should compile and run on Wind
 
 For installation there are 2 alternatives.
 ###Site Wide Installation
-1.  Copy the libMLVFilterAttrib.so and libuiMLVFilterAttrib.so files to the appropriate platfrom sub folder in the OpendTect installation *bin* folder (eg copy to /opt/seismic/OpendTect/4.6.0/bin/lux64/Release)
-2.  Copy the 4 .alo files to the appropriate platfrom sub folder in the OpendTect installation *bin* folder (eg copy to /opt/seismic/OpendTect/4.6.0/bin/lux64/Release)
+1.  Copy the libMLVFilterAttrib.so and libuiMLVFilterAttrib.so files to the appropriate platform sub folder in the OpendTect installation *bin* folder (eg copy to /opt/seismic/OpendTect/4.6.0/bin/lux64/Release)
+2.  Copy the 4 .alo files to the appropriate platform sub folder in the OpendTect installation *bin* folder (eg copy to /opt/seismic/OpendTect/4.6.0/bin/lux64/Release)
 
 ###User Installation
 On unix/linux it is also possible to install the plugin files in a users *.od* folder
 
-1. Copy the libMLVFilterAttrib.so and libuiMLVFilterAttrib.so files to the appropriate platfrom sub folder in the users *./od/bin* folder (eg copy to /home/user/.od/bin/lux64/Release)
-2. Copy the 4 .alo files to the appropriate platform sub folder in the users *.od/plugins* folder (eg copy to /home/user/.od/plugins/lux64)
+1. Copy the libMLVFilterAttrib.so and libuiMLVFilterAttrib.so files to the appropriate platform sub folder in the users *~/.od/bin* folder (eg copy to /home/user/.od/bin/lux64/Release)
+2. Copy the 4 .alo files to the appropriate platform sub folder in the users *~/.od/plugins* folder (eg copy to /home/user/.od/plugins/lux64)
 
-<a name="references"></a>
-##References [![back to top](docs/uparrow.jpg)](#top)
+##References
+[![back to top](docs/uparrow.jpg)](#mlv-filter)
 
-[Schulze & Pearce, 1993][1]
-[1]:<http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=1008684>(Value-and-criterion filters: a new filter structure based on morphological opening and closing)
+######Schulze and Pearce 1993
+[Value-and-criterion filters: a new filter structure based on morphological opening and closing](http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=1008684)
 
-[Al-Dossary & Wang, 2011][2]
-[2]:<http://library.seg.org/doi/pdf/10.1190/1.3627375>(Structure-preserving smoothing for 3D seismic attributes)
+######Al-Dossary and Wang 2011
+[Structure-preserving smoothing for 3D seismic attributes](http://library.seg.org/doi/pdf/10.1190/1.3627375)
