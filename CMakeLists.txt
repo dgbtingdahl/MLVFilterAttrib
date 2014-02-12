@@ -7,7 +7,7 @@
 
 
 cmake_minimum_required (VERSION 2.6)
-project(OpendTect_Tutorial_Plugin)
+project(OpendTect_MLV_Filter_Plugin)
 
 set ( OD_SUBSYSTEM "wgm_plugin" )
 set ( OpendTect_DIR "" CACHE PATH "OpendTect directory" )
@@ -22,7 +22,7 @@ find_package( OpendTect )
 
 
 #Setup the modules
-set ( PLUGINS SPSFilterAttrib uiSPSFilterAttrib MLVFilterAttrib uiMLVFilterAttrib )
+set ( PLUGINS MLVFilterAttrib uiMLVFilterAttrib )
 OD_ADD_MODULES( plugins ${PLUGINS} )
 
 #Add the plugins
