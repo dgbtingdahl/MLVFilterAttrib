@@ -58,7 +58,7 @@ protected:
 	static Provider*		createInstance(Desc&);
 
 	bool					allowParallelComputation() const
-							{ return false; }
+							{ return true; }
 
 	bool					getInputData(const BinID&,int zintv);
 	bool					computeData(const DataHolder&, const BinID& relpos, int z0, int nrsamples, int threadid) const;
