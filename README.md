@@ -1,6 +1,6 @@
 #MLV Filter
 ##Name
-Mean of Least Variance Filter plugin for [OpendTect](http://www.opendtect.org/) - a smoothing filter for seismic data that is kind to structure.
+Mean of Least Variance Filter plugin for [OpendTect](http://www.opendtect.org/) - a smoothing filter for seismic data that is kind to structure. This codebase is for use with OpendTect v5.0 and above.
 
 ##Contents
 -  [Description](#description)
