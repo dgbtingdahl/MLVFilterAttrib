@@ -1,6 +1,8 @@
 CMakeCache.txt
 CMakeFiles
+CMakeModules
 Makefile
 cmake_install.cmake
 install_manifest.txt
 .directory
+*.alo

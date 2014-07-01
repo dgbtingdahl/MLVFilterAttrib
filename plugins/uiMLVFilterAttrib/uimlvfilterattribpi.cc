@@ -27,11 +27,13 @@ ________________________________________________________________________
 
 mDefODPluginInfo(uiMLVFilterAttrib)
 {
-    static PluginInfo retpi = {
-	"Mean of Least Variance Filter Attribute (UI)",
-	"Wayne Mogg",
-	"1.0",
-   	"" };
+	mDefineStaticLocalObject( PluginInfo, retpi,(
+		"Mean of Least Variance Filter Attribute v5 (UI)",
+		"Mean of Least Variance Filter Attribute v5 (UI)",
+		"Wayne Mogg",
+		"5.0",
+		"",
+		PluginInfo::GPL ) );
     return &retpi;
 }
 

@@ -5,13 +5,19 @@
 ________________________________________________________________________
 
  (C) dGB Beheer B.V.; (LICENSE) http://opendtect.org/OpendTect_license.txt
- Author:	A.H.Bril
+ Author:	K. Tingdahl
  Date:		Mar 2006
- RCS:		$Id: initheader.h.in 28999 2013-03-26 13:38:47Z kristofer.tingdahl@dgbes.com $
+ RCS:		$Id: moduleheader.h.in 32104 2013-10-23 20:11:53Z kristofer.tingdahl@dgbes.com $
 ________________________________________________________________________
 
 
 -*/
+
+//
+//This file is generated automatically from CMAKE. It contains export/import
+//Declarations that are used on windows. It also includes deps of all modules
+//that this module is dependent on.
+//
 
 #if defined( __win64__ ) || defined ( __win32__ )
 # define do_import_export
@@ -50,13 +56,8 @@ ________________________________________________________________________
 #endif
 
 #if defined ( do_import_export )
-//Temporary allow extern declaration of extern template instantiation
-#pragma warning( push )
-#pragma warning( disable : 4231 )
 
-#pragma warning( pop )
 
-#include "attributeenginemod.h"
 
 #endif
 

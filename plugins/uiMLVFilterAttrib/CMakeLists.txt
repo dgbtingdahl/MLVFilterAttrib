@@ -1,7 +1,7 @@
 #_______________________Pmake___________________________________________________
 #
-#	Makefile : 	MLV Filter Attribute
-# 	January 2014	Wayne MoggNageswara
+#	Makefile : 	MLVFilterAttrib plugin
+# 	Jan 2014	Wayne Mogg
 #_______________________________________________________________________________
 
 SET(OD_MODULE_DEPS MLVFilterAttrib uiODMain)

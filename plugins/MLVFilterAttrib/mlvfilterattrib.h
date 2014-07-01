@@ -40,7 +40,7 @@ typedef TypeSet<PlanePoint> PlanePointSet;
 typedef Geom::Point2D<int> SamplePoint;
 typedef TypeSet<SamplePoint> SamplePointSet;
 
-mClass(MLVFilterAttrib) MLVFilter : public Provider
+mClass(MLVFilterAttrib_5) MLVFilter : public Provider
 {
 public:
 	static void				initClass();

@@ -67,7 +67,7 @@ uiMLVFilterAttrib::uiMLVFilterAttrib( uiParent* p, bool is2d )
 
 bool uiMLVFilterAttrib::setParameters( const Attrib::Desc& desc )
 {
-    if ( strcmp(desc.attribName(),MLVFilter::attribName()) )
+    if ( desc.attribName() != MLVFilter::attribName() )
 	return false;
 
     mIfGetInt(MLVFilter::sizeStr(),size, sizefld_->box()->setValue(size) )
@@ -85,7 +85,7 @@ bool uiMLVFilterAttrib::setInput( const Attrib::Desc& desc )
 
 bool uiMLVFilterAttrib::getParameters( Attrib::Desc& desc )
 {
-    if ( strcmp(desc.attribName(),MLVFilter::attribName()) )
+    if ( desc.attribName() != MLVFilter::attribName() )
 	return false;
 
     mSetInt( MLVFilter::sizeStr(), sizefld_->box()->getValue() );

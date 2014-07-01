@@ -29,7 +29,6 @@ ________________________________________________________________________
 #include "attribsteering.h"
 #include <math.h>
 
-#include "errh.h"
 namespace Attrib
 {
 
@@ -90,11 +89,11 @@ bool MLVFilter::getTrcPos()
     BinID bid;
     int trcidx = 0;
     centertrcidx_ = 0;
-    for ( bid.inl=-stepout_.inl; bid.inl<=stepout_.inl; bid.inl++ )
+    for ( bid.inl()=-stepout_.inl(); bid.inl()<=stepout_.inl(); bid.inl()++ )
     {
-	for ( bid.crl=-stepout_.crl; bid.crl<=stepout_.crl; bid.crl++ )
+	for ( bid.crl()=-stepout_.crl(); bid.crl()<=stepout_.crl(); bid.crl()++ )
 	{
-	    if ( !bid.inl && !bid.crl )
+	    if ( !bid.inl() && !bid.crl() )
 			centertrcidx_ = trcidx;
 	    trcpos_ += bid;
 	    trcidx++;
@@ -128,7 +127,7 @@ bool MLVFilter::getElements()
 		for ( int trcidx=0; trcidx<trcpos_.size(); trcidx++ ) {
 			const BinID bid = trcpos_[trcidx];
 			for ( int zidx=reqsampgate_.start; zidx<=reqsampgate_.stop; zidx++ ) {
-					PlanePoint pos( bid.inl, bid.crl, zidx);
+					PlanePoint pos( bid.inl(), bid.crl(), zidx);
 					SamplePoint samp( trcidx, zidx );
 					if (pos.dot(pnorms[ielem]) == 0 )
 						pset += samp;

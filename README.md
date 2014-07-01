@@ -82,6 +82,15 @@ On unix/linux it is also possible to install the plugin files in a users *.od* f
 1. Copy the libMLVFilterAttrib.so and libuiMLVFilterAttrib.so files to the appropriate platform sub folder in the users *~/.od/bin* folder (eg copy to /home/user/.od/bin/lux64/Release)
 2. Copy the 4 .alo files to the appropriate platform sub folder in the users *~/.od/plugins* folder (eg copy to /home/user/.od/plugins/lux64)
 
+###Issues
+####libstdc++.so.6: version `GLIBCXX_3.4.??' not found
+This happens when the plugin is built with a gcc version different to the version used to build OpendTect. Solutions are:
+1.  (Easy and seems to work ok but could break something) Rename the libstdc\++.so.6 file in the bin/lux64 folder to say old_libstdc\++.so.6 and restart OpendTect.
+2.  (Hard) Install the same version of gcc that OpendTect was built with and rebuild the plugin
+3.  (Hardest) Build OpendTect from source using your installed gcc
+
+
+
 ##References
 [![back to top](docs/uparrow.jpg)](#mlv-filter)
 
